@@ -22,10 +22,5 @@
         </tr>
     </c:forEach>
 </table>
-
-<form action="/products/demo" method="post">
-    <input type="text" name="username">
-    <button></button>
-</form>
 </body>
 </html>

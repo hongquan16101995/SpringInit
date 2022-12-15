@@ -5,7 +5,6 @@ public class Customer {
     private String name;
     private String email;
     private String address;
-    private City city;
 
     public Customer() {
     }
@@ -15,14 +14,6 @@ public class Customer {
         this.name = name;
         this.email = email;
         this.address = address;
-    }
-
-    public Customer(Long id, String name, String email, String address, City city) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.address = address;
-        this.city = city;
     }
 
     public Long getId() {
@@ -55,13 +46,5 @@ public class Customer {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public City getCity() {
-        return city;
-    }
-
-    public void setCity(City city) {
-        this.city = city;
     }
 }

@@ -13,7 +13,7 @@
 <div class="container">
 <!--    th:object dùng để đón giá trị đối tượng được gửi ra từ controller tương ứng-->
 <!--    th:field dùng để binding giá trị của các trường dữ liệu của đối tượng và input tương ứng-->
-    <form th:action="@{/customers/create}" method="post" th:object="${customer}">
+    <form th:action="@{/customers/save}" method="post" th:object="${customer}">
         <input type="hidden" th:field="*{id}">
         <div class="mb-3 mt-3">
             <label for="name">Name:</label>
@@ -26,12 +26,6 @@
         <div class="mb-3">
             <label for="address">Address:</label>
             <input type="text" class="form-control" id="address" placeholder="Enter address" th:field="*{address}">
-        </div>
-        <div class="mb-3">
-            <label for="city">City:</label>
-            <select th:field="*{city}" id="city">
-                <option th:each="c : ${cities}" th:value="${c.id}" th:text="${c.name}"></option>
-            </select>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         <a class="btn btn-primary" th:href="@{/customers/list}">Back</a>

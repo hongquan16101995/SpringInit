@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/home/bai1" method="post">
+    <input type="text" name="money">
+    <select name="from" >
+        <option value="1">USD</option>
+        <option value="23000">VND</option>
+    </select>
+    <select name="to" >
+        <option value="1">USD</option>
+        <option value="2300">VND</option>
+    </select>
+    <button type="submit">Submit</button>
+</form>
+<h1 th:text="${result}"></h1>
+</body>
+</html>

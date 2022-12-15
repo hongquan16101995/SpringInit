@@ -1,8 +1,6 @@
 package com.cg.spring_mvc.controller;
 
 import com.cg.spring_mvc.model.Customer;
-import com.cg.spring_mvc.service.impl.CustomerService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -17,16 +15,14 @@ public class ProductController {
 
     @GetMapping(value = "/list")
     public ModelAndView findAll() {
-        ModelAndView modelAndView = new ModelAndView("demo");
-        return modelAndView;
+        return new ModelAndView("demo");
     }
 
     @GetMapping(value = "/demo/{text}")
     public ModelAndView view(@PathVariable("text") String text) {
         ModelAndView modelAndView = new ModelAndView("demo");
         modelAndView.addObject("text", text);
-        modelAndView.addObject("thanh", "Thành");
-        modelAndView.addObject("object", new Customer(1L, "Tú", "tu@gmail.com", "LC"));
+        modelAndView.addObject("name", "Thành");
         return modelAndView;
     }
 

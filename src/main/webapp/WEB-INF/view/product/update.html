@@ -13,7 +13,7 @@
 <div class="container">
     <!--    th:object dùng để đón giá trị đối tượng được gửi ra từ controller tương ứng-->
     <!--    th:field dùng để binding giá trị của các trường dữ liệu của đối tượng và input tương ứng-->
-    <form th:action="@{/customers/update}" method="post" th:object="${customer}">
+    <form th:action="@{/customers/save}" method="post" th:object="${customer}">
         <input type="hidden" th:field="*{id}">
         <div class="mb-3 mt-3">
             <label for="name">Name:</label>

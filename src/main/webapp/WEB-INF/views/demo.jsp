@@ -13,7 +13,6 @@
 <body>
 <h1>Demo</h1>
 <h2>${text}</h2>
-<h2>${thanh}</h2>
-<h2>${object.email}</h2>
+<h2>${name}</h2>
 </body>
 </html>

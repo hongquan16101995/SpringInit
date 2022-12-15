@@ -32,7 +32,7 @@
             <td><a th:href="@{/customers/{id}(id=${c.getId()})}" th:text="${c.getName()}"></a></td>
             <td th:text="${c.getEmail()}"></td>
             <td th:text="${c.getAddress()}"></td>
-            <td th:text="${c.getCity().getName()}"></td>
+            <td th:text="${c.getCity().getCityName()}"></td>
             <td><a class="btn btn-warning" th:href="@{/customers/update/{id}(id=${c.getId()})}">Update</a></td>
         </tr>
     </table>

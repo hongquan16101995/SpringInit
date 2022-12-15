@@ -6,6 +6,7 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
+        //quy định class dùng để config
         return new Class[]{AppConfig.class};
     }
 
