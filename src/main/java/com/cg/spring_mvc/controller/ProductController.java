@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 //annotation @RequestMapping dùng để định danh đường dẫn ở mức độ class cho các controllers
@@ -36,5 +37,11 @@ public class ProductController {
         modelAndView.addObject("thanh", "Thành");
         modelAndView.addObject("object", new Customer(1L, "Tú", "tu@gmail.com", "LC"));
         return modelAndView;
+    }
+
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    public String view2(RedirectAttributes redirectAttributes) {
+        redirectAttributes.addFlashAttribute("test", "CodeGym");
+        return "redirect:/customers/list";
     }
 }

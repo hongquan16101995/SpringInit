@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //@Component(value = "demoService")
-public class DemoService implements ICustomerService {
+public class DemoService  {
 
     private static final List<Customer> customers;
 
@@ -16,7 +16,7 @@ public class DemoService implements ICustomerService {
         customers = new ArrayList<>();
         customers.add(new Customer(1L, "Tú", "tu@gmail.com", "LC"));
     }
-    @Override
+//    @Override
     public List<Customer> findAll() {
         return customers;
     }
